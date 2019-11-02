@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kenyan Donor Distribution Map</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"/>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.5/dist/MarkerCluster.css" />
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.5/dist/MarkerCluster.Default.css" />
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        html, body, #map {
+            height: 100%;
+            width: 100%;
+        }
+
+        button {
+            position:absolute;
+            top:10%;
+            right:1%;
+            background-color: #008CBA;
+            padding: 16px;
+            font-size: 16px;
+            border-radius: 8px;
+            color: white;
+            z-index:9999;
+        }
+
+        #button-wrapper {
+            position: absolute;
+            top: 5px;
+            width: 100%;
+        }
+
+        #text {
+            font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+            font-size: 12px;
+            position: absolute;
+            border: 2px dashed #D1C7AC;
+            bottom: 1em;
+            left: 1em;
+            width: 300px;
+            z-index: 9999;
+            background-color: white;
+            padding: 0 0.5em 0.5em 0.5em;
+        }
+
+        .legend {
+            line-height: 18px;
+            color: #555;
+            z-index: 9999;
+        }
+        .legend i {
+            width: 18px;
+            height: 18px;
+            float: left;
+            margin-right: 8px;
+            opacity: 0.7;
+            z-index: 9999;
+        }
+    </style>
+   
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.0.5/dist/leaflet.markercluster.js"></script>
+</head>
+<body>
+
+    <div id="map">
+        <div id="button-wrapper">
+            <button onclick="toggleCluster();">Toggle Clustering</button>
+        </div>
+    </div>
+    <div id="text">
+            <h2 id="title">Kenyan Donor Map</h2>
+            <div id="docs">
+                <p>This map is an example of a few features on Leaflet including markerclustering, a simple toggle to add/remove layers, adding pop-up text boxes to a layer, and choropleth styling of previously joined geojson data. The counties shown are styled according to number of projects.</p>
+                <p>Code can be found <a href="https://github.com/bradleytaftsmith/donor-map">here</a>.</p>
+            </div>
+    </div>
+    
+    <!-- 'counties-joined.js was produced on QGIS & OpenRefine by joining it with the displayed project data' -->
+    <script src= "data/counties_joined.js"></script>
+    <script src= "data/points_raw.js"></script>
+    <script src= "js/donor-map.js"></script>
+    <script src= "js/load-data.js"></script>
+    <script src= "js/controls.js"></script>
+
+    
+</body>
+</html>

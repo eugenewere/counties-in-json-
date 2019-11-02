@@ -22,7 +22,7 @@ Some mapping features exampled are:
 it contains an HTML file that can be run on a web server (index.html).
 
 
-to install, run `git clone https://github.com/bradleytaftsmith/donor-map .` from the working directory of your web server (/var/www/html/ on apache2)
+to install, run `https://github.com/eugenewere/counties-in-json-` from the working directory of your web server (/var/www/html/ on apache2)
 
 # To-Dos
 1. put data-join in code. This table join was hastily done to generate some mappable data. 
